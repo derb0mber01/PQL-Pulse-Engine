@@ -14,4 +14,4 @@ To bridge the gap between product usage and sales action. This engine identifies
 * **Insight:** Power BI/Tableau (Executive Revenue Dashboard)
 
 ### The Logic
-The engine scores users based on a weighted **Velocity-to-Value** formula:
+The engine scores users based on a weighted **Velocity-to-Value** formula
