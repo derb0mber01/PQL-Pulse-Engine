@@ -10,19 +10,19 @@ In a high-growth SaaS environment, the Sales team are overwhelmed by a "Free-Tie
 
 
 ## Technical Architecture
-This repository demonstrates a modular, production-grade GTM logic stack:
+This repository contains a modular, production-grade GTM logic stack:
 
 * **Extraction & Modeling (DuckDB / SQL):** A local OLAP engine that transforms raw behavioral logs into a fct_pql_master table using weighted intent scoring (Teammate invites, feature adoption, and login frequency).
 * **Enrichment Engine (Python):** A "Logic-as-Code" layer that simulates a Clay Waterfall, fetching firmographic data (Industry, Funding, Tech Stack) for identified PQLs.
-* **GTM Strategy Mapping:** A custom Python engine that intersects Product Signals with Org Size to map specific Personas (e.g., VP Ops vs. Founder) to tailored Value Propositions.
-* **Activation Layer (n8n & Webhooks):** An orchestration bridge that pushes data payloads from the warehouse to Slack and Gmail for real-time sales intervention.
+* **GTM Strategy Mapping:** A custom Python engine that intersects Product Signals with Company Size to map specific Personas (e.g., VP Ops vs. Founder) to tailored Value Propositions.
+* **Activation Layer (n8n & Webhooks):** An orchestration bridge that pushes data payloads from the warehouse to Slack and Mailing services for real-time sales intervention.
 
 
 
 ## Repository Structure
 * **/notebooks:** SQL modeling of the PQL scoring matrix and exploratory distribution analysis of user intent.
 * **/scripts:** The '/gtm_alert_engine.py' script featuring the Enrichment Mapping logic and Webhook trigger.
-* **/data:** Tiered storage containing /raw usage data and /processed CRM sync-ready payloads.
+* **/data:** Tiered storage containing '/raw' usage data and '/processed' CRM sync-ready payloads.
 * **/sql:** The transformation logic used to define leads into Intent tiers.
 
 
